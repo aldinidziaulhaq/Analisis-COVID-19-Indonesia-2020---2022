@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -13,7 +14,8 @@ st.set_page_config(
 # ── Load Data ──
 @st.cache_data
 def load_data():
-    df = pd.read_csv('covid_indonesia_clean.csv')
+    path = os.path.join(os.path.dirname(__file__), 'covid_indonesia_clean.csv')
+    df = pd.read_csv(path)
     df['date'] = pd.to_datetime(df['date'])
     return df
 
