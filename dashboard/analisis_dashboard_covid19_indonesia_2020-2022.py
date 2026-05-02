@@ -27,6 +27,7 @@ latest   = provinsi.sort_values('date').groupby('location').last().reset_index()
 # ── Judul ──
 st.title('🦠 Analisis COVID-19 Indonesia 2020-2022')
 st.markdown('Sumber data: COVID-19 Indonesia Time Series Dataset — Kaggle')
+st.markdown('author : (Aldini Dziaul Haq)[https://github.com/aldinidziaulhaq]')
 st.divider()
 
 # ── Kartu Ringkasan ──
